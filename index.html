@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>warcraft-cs - Counter-Strike Style Offline FPS for Warcraft III</title>
+  <meta name="description" content="Download warcraft-cs, a Counter-Strike-style offline FPS for Warcraft III 1.26a RoC/TFT. Includes gold buy menu, squads, configurable weapons, and CS audio.">
+  <meta name="keywords" content="warcraft-cs, Counter-Strike, Warcraft III, offline FPS, RoC, TFT, gold buy menu, squads, configurable weapons, CS audio, download, Windows">
+  <meta name="author" content="cris281">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/cris281/warcraft-cs">
+  <meta property="og:title" content="warcraft-cs - Turn Warcraft III into Counter-Strike">
+  <meta property="og:description" content="Counter-Strike-style offline FPS for Warcraft III 1.26a: RoC/TFT, gold buy menu, squads, configurable weapons, and CS audio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/cris281/warcraft-cs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1e293b">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>warcraft-cs - Counter-Strike Style Offline FPS for Warcraft III</title>
+  <meta name="description" content="Download warcraft-cs, a Counter-Strike-style offline FPS for Warcraft III 1.26a RoC/TFT. Includes gold buy menu, squads, configurable weapons, and CS audio.">
+  <meta name="keywords" content="warcraft-cs, Counter-Strike, Warcraft III, offline FPS, RoC, TFT, gold buy menu, squads, configurable weapons, CS audio, download, Windows">
+  <meta name="author" content="cris281">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/cris281/warcraft-cs">
+  <meta property="og:title" content="warcraft-cs - Turn Warcraft III into Counter-Strike">
+  <meta property="og:description" content="Counter-Strike-style offline FPS for Warcraft III 1.26a: RoC/TFT, gold buy menu, squads, configurable weapons, and CS audio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/cris281/warcraft-cs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1e293b">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #1f2933;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 20px 70px;
+    }
+    header.hero {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 38px 30px;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 1.3;
+      margin: 0 0 14px;
+      color: #0f172a;
+      letter-spacing: -0.4px;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 44px 0 12px;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.08rem;
+      margin: 26px 0 8px;
+      color: #1e3a5f;
+    }
+    p { margin: 0 0 14px; }
+    ul, ol { margin: 0 0 16px; padding-left: 24px; }
+    li { margin-bottom: 8px; }
+    .lede {
+      font-size: 1.08rem;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #f97316, #db2777);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 34px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(219, 39, 119, 0.32);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover, .btn:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(219, 39, 119, 0.4);
+    }
+    .btn.secondary {
+      background: linear-gradient(135deg, #2563eb, #0ea5e9);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+    }
+    .btn.secondary:hover, .btn.secondary:focus {
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.4);
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 24px 26px;
+      box-shadow: 0 3px 14px rgba(15, 23, 42, 0.07);
+      margin-bottom: 22px;
+    }
+    .note {
+      background: #fff8e6;
+      border-left: 5px solid #f59e0b;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    code {
+      background: #eef2f6;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 0.92em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8edf2;
+      font-size: 0.97rem;
+      vertical-align: top;
+    }
+    th { background: #f1f5f9; color: #0f172a; }
+    tr:last-child td { border-bottom: none; }
+    .center { text-align: center; }
+    footer {
+      margin-top: 56px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+    @media (max-width: 560px) {
+      h1 { font-size: 1.55rem; }
+      .wrap { padding: 18px 14px 50px; }
+      header.hero, .card { padding: 22px 18px; }
+      .btn { display: block; padding: 15px 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🎯 warcraft-cs - Turn Warcraft III into Counter-Strike</h1>
+    <p class="lede">A Counter-Strike-style offline first-person shooter for Warcraft III 1.26a (Reign of Chaos and The Frozen Throne). Buy gear with gold, lead squads, swap weapons, and fight to the sound of classic CS audio — all without an internet connection.</p>
+    <p><a class="btn" href="https://github.com/cris281/warcraft-cs">⬇️ Download warcraft-cs</a></p>
+    <p style="font-size:0.92rem;color:#64748b;margin-top:14px;">Visit this link to download the application.</p>
+  </header>
+
+  <h2>🎮 What Is warcraft-cs?</h2>
+  <p>warcraft-cs is a custom game mode that brings the feel of Counter-Strike into Warcraft III. Instead of commanding armies from above, you step into the boots of a single fighter in a first-person view, moving through the map and taking on opponents the way you would in a classic tactical shooter.</p>
+  <p>Everything runs offline on your own computer. There is no account to create, no login screen, and no matchmaking queue. You start the game, jump into a match, and play at your own pace. Because the whole experience is built for single-machine play, you do not need to depend on servers staying online or on other players being available at the same time as you.</p>
+  <p>The project is built specifically for Warcraft III version 1.26a, including both Reign of Chaos and The Frozen Throne. If you already have that version of the game installed on your Windows computer, you are ready to add warcraft-cs and start playing.</p>
+
+  <h2>✨ Main Features</h2>
+
+  <div class="card">
+    <h3>💰 Gold Buy Menu</h3>
+    <p>Earn gold as you play, then spend it in the buy menu before or during a round. Pick up rifles, sidearms, armour, and other equipment exactly like you would in a Counter-Strike buy phase. The menu keeps the economy loop familiar: play well, save up, and invest in better gear for the next fight.</p>
+
+    <h3>👥 Squad System</h3>
+    <p>Fight alongside computer-controlled teammates that move and act as a squad. You can coordinate pushes, hold positions, and rely on your squadmates to cover angles. The squad setup keeps matches feeling lively even when you are playing alone, and it gives you a real sense of teamwork without needing a lobby full of people.</p>
+
+    <h3>🔧 Configurable Weapons</h3>
+    <p>Weapons are not locked down. You can adjust how they behave so the gunplay suits your taste — from damage and handling to the way each round plays out. If you prefer faster, more arcade-style fights, or slower and more tactical exchanges, the configuration options let you shape the match to your liking.</p>
+
+    <h3>🔊 Counter-Strike Audio</h3>
+    <p>The game includes sound effects inspired by classic Counter-Strike, so gunfire, footsteps, and round events carry familiar audio cues. Audio plays a big role in shooters, and having recognisable sounds helps you react faster and stay immersed during a firefight.</p>
+
+    <h3>📡 Fully Offline Play</h3>
+    <p>No internet connection is required to play. Once everything is set up on your machine, matches run locally. That makes warcraft-cs a good choice for laptops, older desktop PCs, or any situation where you want to play without relying on a network connection.</p>
+
+    <h3>🗺️ Built for Warcraft III 1.26a</h3>
+    <p>The game targets Warcraft III 1.26a specifically, for both Reign of Chaos and The Frozen Throne. Using this version keeps behaviour consistent, so the custom maps, triggers, and audio all work the way they were designed to.</p>
+  </div>
+
+  <h2>⬇️ Download and Setup</h2>
+  <p>Getting warcraft-cs onto your computer is a short process. Follow the steps below in order and you will be playing in a few minutes.</p>
+
+  <div class="card">
+    <ol>
+      <li><strong>Open the download page.</strong> Go to <a href="https://github.com/cris281/warcraft-cs">https://github.com/cris281/warcraft-cs</a>. Visit this link to download the application.</li>
+      <li><strong>Grab the files.</strong> Use the download option on the page to save the warcraft-cs files to a folder you can easily find again, such as your Desktop or Downloads folder.</li>
+      <li><strong>Check your Warcraft III version.</strong> Make sure Warcraft III 1.26a is installed on your Windows computer. Both Reign of Chaos and The Frozen Throne are supported.</li>
+      <li><strong>Place the game files.</strong> Put the downloaded warcraft-cs files into the correct Warcraft III folder so the game can find them when it starts. Keep the folder structure exactly as provided.</li>
+      <li><strong>Launch and play.</strong> Start Warcraft III, open the custom game or map selection screen, choose warcraft-cs, and begin a match.</li>
+    </ol>
+    <p class="center" style="margin-top:22px;"><a class="btn secondary" href="https://github.com/cris281/warcraft-cs">⬇️ Get warcraft-cs Now</a></p>
+  </div>
+
+  <div class="note">
+    <strong>Good to know:</strong> warcraft-cs is an offline game mode. You do not need to sign in, create an account, or join a server. Everything you need is in the files you download.
+  </div>
+
+  <h2>🖥️ System Requirements</h2>
+  <p>warcraft-cs runs inside Warcraft III, so your computer needs to handle the base game comfortably. The following setup is a reliable baseline for smooth play.</p>
+  <table>
+    <tr>
+      <th>Component</th>
+      <th>Minimum</th>
+      <th>Recommended</th>
+    </tr>
+    <tr>
+      <td>Operating system</td>
+      <td>Windows 7 or newer</td>
+      <td>Windows 10 or Windows 11</td>
+    </tr>
+    <tr>
+      <td>Warcraft III version</td>
+      <td>1.26a (RoC or TFT)</td>
+      <td>1.26a (RoC or TFT)</td>
+    </tr>
+    <tr>
+      <td>Processor</td>
+      <td>1.5 GHz dual-core</td>
+      <td>2.5 GHz dual-core or better</td>
+    </tr>
+    <tr>
+      <td>Memory</td>
+      <td>2 GB RAM</td>
+      <td>4 GB RAM or more</td>
+    </tr>
+    <tr>
+      <td>Graphics</td>
+      <td>DirectX 9 compatible card</td>
+      <td>Dedicated graphics card</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>3 GB free space</td>
+      <td>5 GB free space</td>
+    </tr>
+    <tr>
+      <td>Sound</td>
+      <td>Any working audio output</td>
+      <td>Headphones or speakers</td>
+    </tr>
+    <tr>
+      <td>Internet</td>
+      <td>Only to download the files</td>
+      <td>Only to download the files</td>
+    </tr>
+  </table>
+  <p>If your machine is older, lowering the in-game graphics settings in Warcraft III will usually keep the frame rate steady. Because warcraft-cs is offline, a slow or unstable internet connection will not affect your matches once the files are on your computer.</p>
+
+  <h2>🕹️ How to Play</h2>
+  <div class="card">
+    <h3>Start a match</h3>
+    <p>Launch Warcraft III and open the custom game list. Select warcraft-cs and start a game. The first moments are spent getting your bearings: check your movement keys, look around, and get used to the first-person view.</p>
+
+    <h3>Buy your gear</h3>
+    <p>During the buy phase, open the gold buy menu and spend your available gold. Weapons, equipment, and upgrades are listed there. Choose a loadout that fits how you like to play — a heavier primary weapon for direct fights, or something lighter for quick movement.</p>
+
+    <h3>Work with your squad</h3>
+    <p>Your squad moves with you. Use them to push into contested areas, cover your flanks, or hold a position while you rotate. Even though they are computer-controlled, treating them like teammates — giving them space and letting them absorb pressure — makes rounds much easier to win.</p>
+
+    <h3>Adjust weapons to your taste</h3>
+    <p>If a weapon feels too strong, too weak, or simply not to your liking, use the configuration options to change it. Tweaking weapon behaviour is a normal part of the experience and a good way to keep matches fresh.</p>
+
+    <h3>Listen for audio cues</h3>
+    <p>Counter-Strike audio is part of the package. Footsteps and gunfire tell you where an opponent is and whether a fight is starting nearby. Playing with sound on gives you a real advantage over playing muted.</p>
+  </div>
+
+  <h2>💡 Tips for New Players</h2>
+  <ul>
+    <li><strong>Learn the buy menu early.</strong> Spend a few minutes clicking through the gold buy menu before your first serious match so you know where each item sits.</li>
+    <li><strong>Save before you spend.</strong> If you are losing rounds, hold your gold for a round or two and then buy stronger equipment rather than picking up small items every round.</li>
+    <li><strong>Stay near your squad.</strong> Moving alone is the quickest way to get picked off. Your squadmates draw attention and give you chances to trade kills.</li>
+    <li><strong>Use sound.</strong> Headphones make a noticeable difference. Directional audio helps you identify where shots and footsteps are coming from.</li>
+    <li><strong>Tune the weapons.</strong> If something feels off, adjust the weapon configuration instead of forcing yourself to adapt to a setting you do not enjoy.</li>
+    <li><strong>Start on a familiar map layout.</strong> Learning routes and angles takes a few matches. Give yourself time before judging how a round went.</li>
+  </ul>
+
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <h3>Do I need an internet connection to play?</h3>
+  <p>No. warcraft-cs is designed as an offline experience. You only need an internet connection to download the files. After that, matches run locally on your computer.</p>
+
+  <h3>Which Warcraft III version should I use?</h3>
+  <p>Version 1.26a. The project supports both Reign of Chaos and The Frozen Throne. Using a different version can cause maps or audio to behave incorrectly, so stick with 1.26a.</p>
+
+  <h3>Can I play with other people?</h3>
+  <p>warcraft-cs is built around offline, single-machine play with squads. It is not a multiplayer matchmaking service, and there is no account system or online lobby to join.</p>
+
+  <h3>Where do I get the game?</h3>
+  <p>From the official project page: <a href="https://github.com/cris281/warcraft-cs">https://github.com/cris281/warcraft-cs</a>. Visit this link to download the application.</p>
+
+  <h3>Do I need to install anything extra?</h3>
+  <p>No additional installers or tools are needed beyond Warcraft III 1.26a itself. Place the downloaded warcraft-cs files where the game expects them, then start a custom game.</p>
+
+  <h3>Why does the game include Counter-Strike audio?</h3>
+  <p>The audio is part of the experience. Familiar gunfire and footstep sounds make firefights easier to read and give the game a tactical shooter feel inside Warcraft III.</p>
+
+  <h3>Can I change how weapons work?</h3>
+  <p>Yes. Weapons are configurable, so you can adjust their behaviour to make matches faster, slower, or simply more to your taste.</p>
+
+  <h2>🛠️ Troubleshooting</h2>
+  <table>
+    <tr>
+      <th>Problem</th>
+      <th>What to Try</th>
+    </tr>
+    <tr>
+      <td>The game does not appear in the custom game list</td>
+      <td>Check that the warcraft-cs files are in the correct Warcraft III folder and that you are running version 1.26a.</td>
+    </tr>
+    <tr>
+      <td>No sound during matches</td>
+      <td>Confirm your speakers or headphones are set as the default audio device in Windows, and that sound is not muted in the Warcraft III options menu.</td>
+    </tr>
+    <tr>
+      <td>The game runs slowly</td>
+      <td>Lower the graphics settings in Warcraft III, close other programs in the background, and make sure your computer meets the requirements listed above.</td>
+    </tr>
+    <tr>
+      <td>The buy menu does not open</td>
+      <td>Make sure the match has started properly and that you are using the correct game version. Restart the match and try again.</td>
+    </tr>
+    <tr>
+      <td>Files seem incomplete</td>
+      <td>Download the files again from the project page and replace the old copies so nothing is missing or corrupted.</td>
+    </tr>
+  </table>
+
+  <h2>📥 Download warcraft-cs</h2>
+  <div class="card center">
+    <p>Everything you need is on the official project page. Visit this link to download the application, then follow the setup steps above.</p>
+    <p><a class="btn" href="https://github.com/cris281/warcraft-cs">⬇️ Download warcraft-cs</a></p>
+    <p style="font-size:0.92rem;color:#64748b;margin-top:16px;">Official page: <a href="https://github.com/cris281/warcraft-cs">https://github.com/cris281/warcraft-cs</a></p>
+  </div>
+
+  <footer>
+    <p>warcraft-cs — Counter-Strike-style offline FPS for Warcraft III 1.26a: RoC/TFT, gold buy menu, squads, configurable weapons and CS audio.</p>
+  </footer>
+
+</div>
+</body>
+</html>
