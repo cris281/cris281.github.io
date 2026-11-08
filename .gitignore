@@ -3,3 +3,4 @@
 Gemfile.lock
 _site
 *.gem
+/CODE_OF_CONDUCT.md
